@@ -16,4 +16,4 @@ jobs:
           echo "$PRIVATE_KEY" > private_key
           chmod 600 private_key
           echo "Hello, World 2"
-          ssh -o StrictHostKeyChecking=no ${USER_NAME}@${HOST_NAME} -i private_key
+          ssh ${USER_NAME}@${HOST_NAME} -i private_key
