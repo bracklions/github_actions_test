@@ -11,14 +11,11 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           USER_NAME: ${{ secrets.USER_NAME }}
           HOST_NAME: ${{ secrets.HOST_NAME }}
-          ONE: 1
         run: |
-          chmod og-rw ~
           echo "$PRIVATE_KEY" > private_key
           chmod 600 private_key
           ls -la
-          echo "${ONE}"
-          ssh -oStrictHostKeyChecking=no ${USER_NAME}@${HOST_NAME} -i private_key
+          ssh -o StrictHostKeyChecking=no "${USER_NAME}"@"${HOST_NAME}"" -i private_key
       - name: echo
         run:
           echo "Hello, World 2"
