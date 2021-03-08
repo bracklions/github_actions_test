@@ -16,6 +16,7 @@ jobs:
           chmod og-rw ~
           echo "$PRIVATE_KEY" > private_key
           chmod 600 private_key
+          ls -la
           echo "${ONE}"
           ssh -oStrictHostKeyChecking=no ${USER_NAME}@${HOST_NAME} -i private_key
       - name: echo
