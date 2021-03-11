@@ -10,7 +10,7 @@ jobs:
         env:
           PRIVATE_KEY: ${{ secrets.FUMIDAI_KEY }}
           USER_NAME: ${{ secrets.FUMIDAI_USER }}
-          HOST_NAME: ${{ secrets.FUMIJDAI_HOST }}
+          HOST_NAME: ${{ secrets.FUMIDAI_HOST }}
         run: |
           echo "$PRIVATE_KEY" > private_key
           chmod 600 private_key
